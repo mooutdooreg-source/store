@@ -11,34 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $hero_slides = array(
 	array(
-		'desktop' => mo_store_image_url( 'hero-01.webp' ),
-		'mobile'  => mo_store_image_url( 'hero-01-mobile.webp' ),
-		'alt'     => 'Blade and steel close-up',
-	),
-	array(
-		'desktop' => mo_store_image_url( 'hero-02.webp' ),
-		'mobile'  => mo_store_image_url( 'hero-02-mobile.webp' ),
-		'alt'     => 'Handle and material detail',
-	),
-	array(
-		'desktop' => mo_store_image_url( 'hero-03.webp' ),
-		'mobile'  => mo_store_image_url( 'hero-03-mobile.webp' ),
-		'alt'     => 'Grinding and finishing moment',
-	),
-	array(
-		'desktop' => mo_store_image_url( 'hero-04.webp' ),
-		'mobile'  => mo_store_image_url( 'hero-04-mobile.webp' ),
-		'alt'     => 'Finished knife beauty shot',
-	),
-	array(
-		'desktop' => mo_store_image_url( 'hero-05.webp' ),
-		'mobile'  => mo_store_image_url( 'hero-05-mobile.webp' ),
-		'alt'     => 'Dark craft background',
-	),
-	array(
-		'desktop' => mo_store_image_url( 'hero-06.webp' ),
-		'mobile'  => mo_store_image_url( 'hero-06-mobile.webp' ),
-		'alt'     => 'Subtle usage mood',
+		'desktop' => mo_store_image_url( 'hero-home.webp' ),
+		'mobile'  => mo_store_image_url( 'hero-home.webp' ),
+		'alt'     => 'Mo the Bladesmith working hot steel in the forge',
 	),
 );
 ?>
