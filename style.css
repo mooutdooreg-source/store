@@ -1,0 +1,30 @@
+/*
+Theme Name: MO Knives Store Child
+Theme URI: https://moknives.store
+Description: Custom WoodMart child theme for moknives.store — a premium dark cinematic bladesmith store built for limited MO Store lines, MO Gear, Elementor, and WooCommerce.
+Author: MO Knives
+Author URI: https://moknives.store
+Template: woodmart
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+Text Domain: moknives-store-child
+Domain Path: /languages
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags: e-commerce, woocommerce, elementor, dark, responsive, custom-theme
+*/
+
+/*
+|--------------------------------------------------------------------------
+| MO Knives Store Child Theme
+|--------------------------------------------------------------------------
+|
+| Primary styling is loaded from:
+| assets/css/mo-store.css
+|
+| This file is intentionally kept minimal for WordPress child theme
+| identification and WoodMart child theme compatibility.
+|
+*/
