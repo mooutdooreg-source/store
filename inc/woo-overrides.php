@@ -9,6 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! class_exists( 'WooCommerce' ) && ! function_exists( 'WC' ) ) {
+	return;
+}
+
 /**
  * Remove generic WooCommerce wrappers where child templates provide cinematic structure.
  */
@@ -46,7 +50,10 @@ add_filter( 'loop_shop_per_page', 'mo_store_products_per_page', 20 );
  * Notices still render inside cart/checkout where WooCommerce needs them.
  */
 function mo_store_remove_shop_notices() {
-	if ( is_shop() || is_product_taxonomy() ) {
+	$is_shop_context = function_exists( 'is_shop' ) && is_shop();
+	$is_tax_context  = function_exists( 'is_product_taxonomy' ) && is_product_taxonomy();
+
+	if ( $is_shop_context || $is_tax_context ) {
 		remove_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10 );
 	}
 }

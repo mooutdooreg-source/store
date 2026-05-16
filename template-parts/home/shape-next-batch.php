@@ -37,6 +37,13 @@ $options = mo_store_get_batch_preference_options();
 			<input type="hidden" name="nonce" value="<?php echo esc_attr( wp_create_nonce( 'mo_store_preference_nonce' ) ); ?>">
 			<input type="hidden" name="preference" value="" data-mo-preference-value>
 
+			<div class="mo-honeypot" aria-hidden="true">
+				<label for="mo-preference-website">
+					<?php esc_html_e( 'Website', 'moknives-store-child' ); ?>
+				</label>
+				<input id="mo-preference-website" type="text" name="mo_store_website" tabindex="-1" autocomplete="off">
+			</div>
+
 			<div class="mo-batch__options" role="listbox" aria-label="<?php esc_attr_e( 'Choose a direction', 'moknives-store-child' ); ?>">
 				<?php foreach ( $options as $option ) : ?>
 					<button

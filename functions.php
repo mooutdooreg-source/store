@@ -98,6 +98,27 @@ function mo_store_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'mo_store_enqueue_assets', 20 );
 
 /**
+ * Determine whether the current request is handled by WooCommerce.
+ *
+ * @return bool
+ */
+function mo_store_is_woocommerce_context() {
+	if ( function_exists( 'is_shop' ) && is_shop() ) {
+		return true;
+	}
+
+	if ( function_exists( 'is_product_taxonomy' ) && is_product_taxonomy() ) {
+		return true;
+	}
+
+	if ( function_exists( 'is_product' ) && is_product() ) {
+		return true;
+	}
+
+	return false;
+}
+
+/**
  * Add body classes used by the MO Store front-end.
  *
  * @param array $classes Existing body classes.
@@ -114,7 +135,7 @@ function mo_store_body_classes( $classes ) {
 		$classes[] = 'mo-store-line-page';
 	}
 
-	if ( is_page( 'mo-gear' ) || is_shop() || is_product_taxonomy() || is_product() ) {
+	if ( is_page( 'mo-gear' ) || mo_store_is_woocommerce_context() ) {
 		$classes[] = 'mo-store-gear';
 	}
 

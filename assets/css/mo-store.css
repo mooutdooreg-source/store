@@ -773,6 +773,16 @@ body.admin-bar .mo-navbar {
 	color: #f0b4a6;
 }
 
+.mo-honeypot {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
 /* Footer */
 .mo-footer {
 	border-top: 1px solid rgba(207, 160, 77, 0.12);
@@ -1331,6 +1341,14 @@ body.admin-bar .mo-navbar {
 	border-color: var(--mo-bronze);
 	background: rgba(207, 160, 77, 0.06);
 	color: var(--mo-text);
+}
+
+.mo-gear-category--inactive,
+.mo-gear-category--inactive:hover {
+	border-color: rgba(244, 239, 229, 0.08);
+	background: transparent;
+	color: rgba(244, 239, 229, 0.46);
+	cursor: default;
 }
 
 .mo-gear-shop {
