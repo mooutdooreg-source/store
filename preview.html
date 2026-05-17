@@ -22,7 +22,7 @@
 			right: 14px;
 			bottom: 14px;
 			z-index: 1400;
-			max-width: 280px;
+			max-width: 300px;
 			padding: 12px 14px;
 			border: 1px solid rgba(207, 160, 77, 0.35);
 			border-radius: 16px;
@@ -58,24 +58,6 @@
 			background:
 				radial-gradient(circle at 50% 50%, rgba(207, 160, 77, 0.28), transparent 15rem),
 				linear-gradient(145deg, #050505, #1b1b1b 54%, #080808);
-		}
-
-		.mo-preview-media--takumo {
-			background:
-				radial-gradient(circle at 70% 28%, rgba(244, 239, 229, 0.18), transparent 15rem),
-				linear-gradient(135deg, #050505, #222 48%, #080808);
-		}
-
-		.mo-preview-media--matador {
-			background:
-				radial-gradient(circle at 30% 52%, rgba(207, 160, 77, 0.2), transparent 14rem),
-				linear-gradient(135deg, #050505, #19120e 48%, #090909);
-		}
-
-		.mo-preview-media--pitmaster {
-			background:
-				radial-gradient(circle at 62% 36%, rgba(207, 160, 77, 0.34), transparent 14rem),
-				linear-gradient(135deg, #050505, #24180d 54%, #070707);
 		}
 
 		.mo-preview-product-grid {
@@ -120,9 +102,8 @@
 
 			<nav class="mo-navbar__nav" aria-label="MO Store primary navigation">
 				<a class="mo-navbar__link" href="#explore-lines">Lines</a>
-				<a class="mo-navbar__link" href="#shape-next-batch">About Store</a>
-				<a class="mo-navbar__link" href="#mo-store-standard">Craft</a>
-				<a class="mo-navbar__link" href="#mo-gear-preview">MO Gear</a>
+				<a class="mo-navbar__link" href="why-mo.html">Why MO</a>
+				<a class="mo-navbar__link" href="https://moknives.art/" target="_blank" rel="noopener">Custom Orders</a>
 			</nav>
 
 			<button
@@ -141,9 +122,8 @@
 		<div class="mo-mobile-menu" id="mo-mobile-menu" data-mo-mobile-menu hidden>
 			<div class="mo-mobile-menu__panel">
 				<a class="mo-mobile-menu__link" href="#explore-lines"><span>01</span>Lines</a>
-				<a class="mo-mobile-menu__link" href="#shape-next-batch"><span>02</span>About Store</a>
-				<a class="mo-mobile-menu__link" href="#mo-store-standard"><span>03</span>Craft</a>
-				<a class="mo-mobile-menu__link" href="#mo-gear-preview"><span>04</span>MO Gear</a>
+				<a class="mo-mobile-menu__link" href="why-mo.html"><span>02</span>Why MO</a>
+				<a class="mo-mobile-menu__link" href="https://moknives.art/" target="_blank" rel="noopener"><span>03</span>Custom Orders</a>
 			</div>
 		</div>
 	</header>
@@ -152,54 +132,59 @@
 		<section class="mo-hero" aria-label="MO Store cinematic introduction">
 			<div class="mo-hero__slideshow" data-mo-hero-slideshow>
 				<picture class="mo-hero__slide is-active" data-mo-hero-slide>
-					<span class="mo-preview-media mo-preview-media--steel"></span>
-				</picture>
-
-				<picture class="mo-hero__slide" data-mo-hero-slide>
-					<span class="mo-preview-media mo-preview-media--handle"></span>
-				</picture>
-
-				<picture class="mo-hero__slide" data-mo-hero-slide>
-					<span class="mo-preview-media mo-preview-media--grind"></span>
-				</picture>
-
-				<picture class="mo-hero__slide" data-mo-hero-slide>
-					<span class="mo-preview-media mo-preview-media--pitmaster"></span>
+					<img src="assets/img/hero-home-culinary.webp" alt="MO culinary blade with wagyu, garlic, and herbs" loading="eager" decoding="async">
 				</picture>
 			</div>
 
 			<div class="mo-hero__overlay" aria-hidden="true"></div>
+			<div class="mo-hero__announcement" role="status">New batches begin production in July</div>
 
 			<div class="mo-hero__content">
 				<p class="mo-hero__kicker">MO Store</p>
-
-				<h1 class="mo-hero__title">Limited numbered batches by MO.</h1>
-
-				<p class="mo-hero__lead">
-					Small-batch blades designed, ground by hand, hand-finished, sharpened, and heat-treated by Mo the Bladesmith.
-				</p>
-
-				<p class="mo-hero__release">
-					Prepared for limited release.<br>
-					New batches begin production in July.
-				</p>
-
-				<a class="mo-button mo-button--primary mo-hero__button" href="#explore-lines">
-					Explore the Lines
-				</a>
+				<h1 class="mo-hero__title">
+					<span>Premium Hard-Use</span>
+					<span class="mo-hero__title-accent">Blades</span>
+				</h1>
+				<p class="mo-hero__subheadline">Available exclusively in limited numbered releases. Hand-finished and expertly heat-treated for ultimate performance.</p>
+				<p class="mo-hero__lead">Premium production blades designed, hand-ground, and precision heat-treated by Mo the Bladesmith.</p>
+				<a class="mo-button mo-button--primary mo-hero__button" href="#explore-lines">Explore the Lines</a>
 			</div>
 		</section>
 
 		<section class="mo-standard-bar" id="mo-store-standard" aria-label="MO Store Standard">
 			<div class="mo-standard-bar__track" data-mo-marquee>
-				<div class="mo-standard-bar__item"><span class="mo-icon mo-standard-bar__icon">◇</span><span>Small-batch production</span></div>
-				<div class="mo-standard-bar__item"><span class="mo-icon mo-standard-bar__icon">—</span><span>Ground by hand</span></div>
-				<div class="mo-standard-bar__item"><span class="mo-icon mo-standard-bar__icon">✦</span><span>Hand-finished &amp; sharpened</span></div>
-				<div class="mo-standard-bar__item"><span class="mo-icon mo-standard-bar__icon">◇</span><span>Heat-treated by MO</span></div>
-				<div class="mo-standard-bar__item"><span class="mo-icon mo-standard-bar__icon">—</span><span>Limited numbered batches</span></div>
-				<div class="mo-standard-bar__item"><span class="mo-icon mo-standard-bar__icon">◇</span><span>Small-batch production</span></div>
-				<div class="mo-standard-bar__item"><span class="mo-icon mo-standard-bar__icon">—</span><span>Ground by hand</span></div>
-				<div class="mo-standard-bar__item"><span class="mo-icon mo-standard-bar__icon">✦</span><span>Hand-finished &amp; sharpened</span></div>
+				<div class="mo-standard-bar__item"><img class="mo-standard-bar__image" src="assets/img/standard-grinding.jpg" alt="" loading="lazy" decoding="async"><span>Ground by hand</span></div>
+				<div class="mo-standard-bar__item"><img class="mo-standard-bar__image" src="assets/img/standard-sharpening.jpg" alt="" loading="lazy" decoding="async"><span>Hand-finished &amp; sharpened</span></div>
+				<div class="mo-standard-bar__item"><img class="mo-standard-bar__image" src="assets/img/standard-heat-treatment.webp" alt="" loading="lazy" decoding="async"><span>Heat-treated by MO</span></div>
+				<div class="mo-standard-bar__item"><img class="mo-standard-bar__image" src="assets/img/standard-limited-batch.webp" alt="" loading="lazy" decoding="async"><span>Limited numbered batches</span></div>
+				<div class="mo-standard-bar__item"><img class="mo-standard-bar__image" src="assets/img/standard-grinding.jpg" alt="" loading="lazy" decoding="async"><span>Ground by hand</span></div>
+				<div class="mo-standard-bar__item"><img class="mo-standard-bar__image" src="assets/img/standard-sharpening.jpg" alt="" loading="lazy" decoding="async"><span>Hand-finished &amp; sharpened</span></div>
+				<div class="mo-standard-bar__item"><img class="mo-standard-bar__image" src="assets/img/standard-heat-treatment.webp" alt="" loading="lazy" decoding="async"><span>Heat-treated by MO</span></div>
+				<div class="mo-standard-bar__item"><img class="mo-standard-bar__image" src="assets/img/standard-limited-batch.webp" alt="" loading="lazy" decoding="async"><span>Limited numbered batches</span></div>
+			</div>
+		</section>
+
+		<section class="mo-why" id="why-mo" aria-labelledby="mo-why-title">
+			<div class="mo-why__inner">
+				<div class="mo-why__intro">
+					<p class="mo-why__kicker">Why MO / Origin</p>
+					<h2 id="mo-why-title">
+						<span>No Theater.</span>
+						<span class="mo-why__title-accent">Only performance</span>
+					</h2>
+					<p>My work did not begin at the anvil. It began in the field - as a hunter, angler, and open-fire cook - shaped by the demanding reality of use.</p>
+					<a class="mo-why-trust" href="why-mo.html" aria-label="Read the full Why MO proof page">
+						<img class="mo-why-trust__badge" src="assets/img/abs-member-badge.svg" alt="American Bladesmith Society member badge" loading="lazy" decoding="async">
+						<div class="mo-why-trust__copy">
+							<span>ABS Member</span>
+							<p>ABS Member. Forging since 2015 under the name Mo. Building for the wild, the mission, the kitchen, and the long life of an heirloom.</p>
+						</div>
+					</a>
+					<div class="mo-why-video">
+						<video src="assets/video/performance-proof.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Performance proof process video"></video>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -211,53 +196,56 @@
 
 			<div class="mo-lines__slider" data-mo-lines-slider>
 				<div class="mo-lines__track" data-mo-slider-track>
-					<article class="mo-line-card skeleton is-loaded" data-mo-slider-card>
-						<span class="mo-line-card__image mo-preview-media--takumo"></span>
+					<a class="mo-line-card skeleton" id="mo-takumo-card" href="takumo.html" data-mo-slider-card>
+						<img class="mo-line-card__image" src="assets/img/lines-takumo.webp" alt="TAKUMO line preview" loading="lazy" decoding="async">
 						<div class="mo-line-card__overlay" aria-hidden="true"></div>
-
 						<div class="mo-line-card__content">
 							<p class="mo-line-card__eyebrow">Signature Line</p>
 							<h3>TAKUMO</h3>
 							<p class="mo-line-card__description">Japanese-inspired limited kitchen blades.</p>
 							<p class="mo-line-card__status">Prepared for Limited Release</p>
-							<a class="mo-line-card__link" href="#takumo-preview">Explore Line</a>
+							<span class="mo-line-card__link">Explore Line</span>
 						</div>
-					</article>
+					</a>
 
-					<article class="mo-line-card skeleton is-loaded" data-mo-slider-card>
-						<span class="mo-line-card__image mo-preview-media--matador"></span>
+					<a class="mo-line-card skeleton" id="mo-matador-card" href="matador.html" data-mo-slider-card>
+						<img class="mo-line-card__image" src="assets/img/lines-matador.jpg" alt="MATADOR line preview" loading="lazy" decoding="async">
 						<div class="mo-line-card__overlay" aria-hidden="true"></div>
-
 						<div class="mo-line-card__content">
 							<p class="mo-line-card__eyebrow">Signature Line</p>
 							<h3>MATADOR</h3>
 							<p class="mo-line-card__description">Butchery-focused blades built for heavy cutting work.</p>
 							<p class="mo-line-card__status">Prepared for Limited Release</p>
-							<a class="mo-line-card__link" href="#takumo-preview">Explore Line</a>
+							<span class="mo-line-card__link">Explore Line</span>
 						</div>
-					</article>
+					</a>
 
-					<article class="mo-line-card skeleton is-loaded" data-mo-slider-card>
-						<span class="mo-line-card__image mo-preview-media--pitmaster"></span>
+					<a class="mo-line-card skeleton" id="mo-pitmaster-card" href="pitmaster.html" data-mo-slider-card>
+						<img class="mo-line-card__image" src="assets/img/lines-pitmaster.webp" alt="PITMASTER line preview" loading="lazy" decoding="async">
 						<div class="mo-line-card__overlay" aria-hidden="true"></div>
-
 						<div class="mo-line-card__content">
 							<p class="mo-line-card__eyebrow">Signature Line</p>
 							<h3>PITMASTER</h3>
 							<p class="mo-line-card__description">BBQ-focused blades, forks, grills, and wooden serving pieces.</p>
 							<p class="mo-line-card__status">Prepared for Limited Release</p>
-							<a class="mo-line-card__link" href="#takumo-preview">Explore Line</a>
+							<span class="mo-line-card__link">Explore Line</span>
 						</div>
-					</article>
-				</div>
+					</a>
 
-				<div class="mo-lines__desktop-controls" aria-hidden="true">
-					<button class="mo-lines__arrow" type="button" data-mo-slider-prev tabindex="-1">‹</button>
-					<button class="mo-lines__arrow" type="button" data-mo-slider-next tabindex="-1">›</button>
-				</div>
-
-				<div class="mo-slider-progress" aria-hidden="true">
-					<span data-mo-slider-progress></span>
+					<a class="mo-line-card skeleton" id="mo-gear-card" href="mo-gear.html" data-mo-slider-card>
+						<picture class="mo-line-card__image">
+							<source media="(max-width: 767px)" srcset="assets/img/mo-gear-card-mobile.webp">
+							<img src="assets/img/mo-gear-card.webp" alt="MO GEAR line preview" loading="lazy" decoding="async">
+						</picture>
+						<div class="mo-line-card__overlay" aria-hidden="true"></div>
+						<div class="mo-line-card__content">
+							<p class="mo-line-card__eyebrow">Gear Collection</p>
+							<h3>MO GEAR</h3>
+							<p class="mo-line-card__description">Hard-to-find gear for people who take blades seriously.</p>
+							<p class="mo-line-card__status">Integrated with Store Lines</p>
+							<span class="mo-line-card__link">Explore Gear</span>
+						</div>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -266,9 +254,7 @@
 			<div class="mo-batch__inner">
 				<div class="mo-section-heading mo-batch__heading">
 					<h2 id="mo-batch-title">Shape the Next Batch</h2>
-					<p>
-						MO Store releases are built as focused limited batches — each line shaped around a defined use, cutting purpose, and MO standard.
-					</p>
+					<p>MO Store releases are built as focused limited batches - each line shaped around a defined use, cutting purpose, and MO standard.</p>
 				</div>
 
 				<form class="mo-batch__form" data-mo-preference-form>
@@ -281,288 +267,31 @@
 
 					<div class="mo-batch__options" role="listbox" aria-label="Choose a direction">
 						<button class="mo-batch-option" type="button" role="option" aria-selected="false" data-mo-preference-option data-value="japanese-kitchen-blades">
-							<span class="mo-batch-option__icon">—</span>
+							<span class="mo-batch-option__icon">&mdash;</span>
 							<span class="mo-batch-option__label">Japanese kitchen blades</span>
-							<span class="mo-batch-option__check">✓</span>
+							<span class="mo-batch-option__check">&#10003;</span>
 						</button>
 
 						<button class="mo-batch-option" type="button" role="option" aria-selected="false" data-mo-preference-option data-value="butchery-heavy-cutting">
-							<span class="mo-batch-option__icon">▰</span>
+							<span class="mo-batch-option__icon">&#9650;</span>
 							<span class="mo-batch-option__label">Butchery / heavy cutting</span>
-							<span class="mo-batch-option__check">✓</span>
+							<span class="mo-batch-option__check">&#10003;</span>
 						</button>
 
 						<button class="mo-batch-option" type="button" role="option" aria-selected="false" data-mo-preference-option data-value="bbq-tools-serving-pieces">
-							<span class="mo-batch-option__icon">♨</span>
+							<span class="mo-batch-option__icon">&#9832;</span>
 							<span class="mo-batch-option__label">BBQ tools &amp; serving pieces</span>
-							<span class="mo-batch-option__check">✓</span>
-						</button>
-
-						<button class="mo-batch-option" type="button" role="option" aria-selected="false" data-mo-preference-option data-value="outdoor-utility-blades">
-							<span class="mo-batch-option__icon">◇</span>
-							<span class="mo-batch-option__label">Outdoor / utility blades</span>
-							<span class="mo-batch-option__check">✓</span>
-						</button>
-
-						<button class="mo-batch-option" type="button" role="option" aria-selected="false" data-mo-preference-option data-value="something-new">
-							<span class="mo-batch-option__icon">✦</span>
-							<span class="mo-batch-option__label">Something new</span>
-							<span class="mo-batch-option__check">✓</span>
+							<span class="mo-batch-option__check">&#10003;</span>
 						</button>
 					</div>
 
 					<p class="mo-batch__note">This helps guide future MO Store batches.</p>
-
-					<button class="mo-button mo-button--primary mo-batch__submit" type="submit" disabled data-mo-preference-submit>
-						Submit Preference
-					</button>
-
+					<button class="mo-button mo-button--primary mo-batch__submit" type="submit" disabled data-mo-preference-submit>Submit Preference</button>
 					<div class="mo-form-message" data-mo-preference-message aria-live="polite"></div>
 				</form>
 			</div>
 		</section>
 
-		<section class="mo-line-hero" id="takumo-preview" aria-labelledby="takumo-preview-title">
-			<span class="mo-line-hero__media mo-preview-media mo-preview-media--takumo"></span>
-			<div class="mo-line-hero__overlay" aria-hidden="true"></div>
-
-			<div class="mo-line-hero__content">
-				<p class="mo-line-hero__badge">Production Begins July</p>
-				<h1 id="takumo-preview-title">TAKUMO</h1>
-				<p class="mo-line-hero__eyebrow">Signature Line</p>
-				<p class="mo-line-hero__description">Japanese-inspired limited kitchen blades.</p>
-			</div>
-		</section>
-
-		<section class="mo-line-media" aria-labelledby="takumo-media-title">
-			<div class="mo-line-media__heading">
-				<p class="mo-line-media__kicker">Visual Chapters</p>
-				<h2 id="takumo-media-title">TAKUMO</h2>
-			</div>
-
-			<div class="mo-line-media__slider" data-mo-line-media-slider>
-				<div class="mo-line-media__track" data-mo-line-media-track>
-					<button class="mo-media-card skeleton is-loaded" type="button" data-mo-media-card data-index="0" data-type="image" data-src="" data-name="TAKUMO Form">
-						<span class="mo-media-card__visual mo-preview-media--takumo"></span>
-						<span class="mo-media-card__overlay" aria-hidden="true"></span>
-						<span class="mo-media-card__content">
-							<span class="mo-media-card__chapter">01 Form</span>
-							<span class="mo-media-card__name">TAKUMO Form</span>
-						</span>
-					</button>
-
-					<button class="mo-media-card skeleton is-loaded" type="button" data-mo-media-card data-index="1" data-type="image" data-src="" data-name="TAKUMO Edge">
-						<span class="mo-media-card__visual mo-preview-media--steel"></span>
-						<span class="mo-media-card__overlay" aria-hidden="true"></span>
-						<span class="mo-media-card__content">
-							<span class="mo-media-card__chapter">02 Edge</span>
-							<span class="mo-media-card__name">TAKUMO Edge</span>
-						</span>
-					</button>
-
-					<button class="mo-media-card skeleton is-loaded" type="button" data-mo-media-card data-index="2" data-type="image" data-src="" data-name="TAKUMO Handle">
-						<span class="mo-media-card__visual mo-preview-media--handle"></span>
-						<span class="mo-media-card__overlay" aria-hidden="true"></span>
-						<span class="mo-media-card__content">
-							<span class="mo-media-card__chapter">03 Handle</span>
-							<span class="mo-media-card__name">TAKUMO Handle</span>
-						</span>
-					</button>
-				</div>
-
-				<div class="mo-slider-progress" aria-hidden="true">
-					<span data-mo-line-media-progress></span>
-				</div>
-			</div>
-
-			<div
-				class="mo-media-viewer"
-				data-mo-media-viewer
-				aria-hidden="true"
-				role="dialog"
-				aria-modal="true"
-				aria-label="Fullscreen media viewer"
-			>
-				<button class="mo-media-viewer__close" type="button" data-mo-media-close aria-label="Close media viewer">×</button>
-				<button class="mo-media-viewer__nav mo-media-viewer__nav--prev" type="button" data-mo-media-prev aria-label="Previous media">‹</button>
-				<div class="mo-media-viewer__stage" data-mo-media-stage></div>
-				<button class="mo-media-viewer__nav mo-media-viewer__nav--next" type="button" data-mo-media-next aria-label="Next media">›</button>
-				<p class="mo-media-viewer__name" data-mo-media-name></p>
-			</div>
-		</section>
-
-		<section class="mo-line-story-cta" aria-label="Read the Line Story">
-			<a class="mo-button mo-button--ghost mo-line-story-cta__button" href="#line-story-takumo-preview">
-				Read the Line Story
-			</a>
-		</section>
-
-		<section class="mo-line-story" id="line-story-takumo-preview">
-			<div class="mo-line-story__inner">
-				<p class="mo-line-story__kicker">TAKUMO</p>
-				<h2>Line Story</h2>
-				<div class="mo-line-story__copy">
-					<p>Story copy pending approval.</p>
-				</div>
-			</div>
-		</section>
-
-		<section class="mo-july-message">
-			<div class="mo-july-message__card">
-				<h2>The first July batches will be limited.</h2>
-				<p>Register your interest early to be notified before the release opens.</p>
-			</div>
-		</section>
-
-		<section class="mo-interest" aria-labelledby="mo-interest-preview-title">
-			<div class="mo-interest__inner">
-				<div class="mo-interest__content">
-					<p class="mo-interest__kicker">TAKUMO</p>
-					<h2 id="mo-interest-preview-title">Join the First Release List</h2>
-					<p>Register your interest for the first limited batches prepared for July.</p>
-					<p class="mo-interest__note">No deposit required for the first run.</p>
-				</div>
-
-				<form class="mo-interest__form" data-mo-interest-form>
-					<div class="mo-field">
-						<label for="preview-name">Name</label>
-						<input id="preview-name" type="text" name="name" autocomplete="name" required>
-					</div>
-
-					<div class="mo-field">
-						<label for="preview-email">Email</label>
-						<input id="preview-email" type="email" name="email" autocomplete="email" required>
-					</div>
-
-					<div class="mo-field">
-						<label for="preview-country">Country</label>
-						<input id="preview-country" type="text" name="country" autocomplete="country-name" required>
-					</div>
-
-					<div class="mo-field">
-						<label for="preview-line">Line of Interest</label>
-						<select id="preview-line" name="line" data-default-value="TAKUMO" required>
-							<option value="TAKUMO" selected>TAKUMO</option>
-							<option value="MATADOR">MATADOR</option>
-							<option value="PITMASTER">PITMASTER</option>
-							<option value="Not Sure Yet">Not Sure Yet</option>
-						</select>
-					</div>
-
-					<div class="mo-field">
-						<label for="preview-preferred">Preferred design / use</label>
-						<input
-							id="preview-preferred"
-							type="text"
-							name="preferred_design"
-							placeholder="Example: gyuto, brisket slicer, heavy butcher blade, serving set..."
-							required
-						>
-					</div>
-
-					<div class="mo-field mo-field--full">
-						<label for="preview-message">Message optional</label>
-						<textarea id="preview-message" name="message" rows="5"></textarea>
-					</div>
-
-					<button class="mo-button mo-button--primary mo-interest__submit" type="submit">
-						Join the List
-					</button>
-
-					<div class="mo-form-message" data-mo-interest-message aria-live="polite"></div>
-				</form>
-			</div>
-		</section>
-
-		<section class="mo-gear-hero" id="mo-gear-preview" aria-labelledby="mo-gear-preview-title">
-			<span class="mo-gear-hero__media mo-preview-media mo-preview-media--pitmaster"></span>
-			<div class="mo-gear-hero__overlay" aria-hidden="true"></div>
-
-			<div class="mo-gear-hero__content">
-				<p class="mo-gear-hero__kicker">MO GEAR</p>
-				<h1 id="mo-gear-preview-title">BEYOND THE BLADE</h1>
-				<p>Because details matter. Hard-to-find gear for people who take blades seriously.</p>
-			</div>
-		</section>
-
-		<section class="mo-gear-categories" aria-label="MO Gear categories">
-			<div class="mo-gear-categories__track">
-				<a class="mo-gear-category" href="#mo-gear-preview">Cutting Boards</a>
-				<a class="mo-gear-category" href="#mo-gear-preview">BBQ Gear</a>
-				<a class="mo-gear-category" href="#mo-gear-preview">Shears</a>
-				<a class="mo-gear-category" href="#mo-gear-preview">Aprons</a>
-				<a class="mo-gear-category" href="#mo-gear-preview">Sharpening</a>
-				<a class="mo-gear-category" href="#mo-gear-preview">Maintenance</a>
-				<a class="mo-gear-category" href="#mo-gear-preview">Leather Work</a>
-				<a class="mo-gear-category" href="#mo-gear-preview">Gifts</a>
-			</div>
-		</section>
-
-		<section class="mo-gear-shop" aria-label="MO Gear static product preview">
-			<div class="mo-gear-shop__inner">
-				<ul class="products mo-preview-product-grid">
-					<li class="product mo-gear-product">
-						<a class="mo-gear-product__media" href="#mo-gear-preview">
-							<span class="mo-preview-product-img"></span>
-						</a>
-
-						<div class="mo-gear-product__content">
-							<span class="mo-gear-card-kicker">MO Gear</span>
-							<h2 class="mo-gear-product__title">
-								<a href="#mo-gear-preview">Walnut Cutting Board</a>
-							</h2>
-							<div class="mo-gear-product__excerpt">
-								<p>Dark serving board selected for blade-focused kitchens.</p>
-							</div>
-							<div class="mo-gear-product__footer">
-								<div class="mo-gear-product__price">$120</div>
-								<a class="button mo-gear-product__button" href="#mo-gear-preview">Add to Cart</a>
-							</div>
-						</div>
-					</li>
-
-					<li class="product mo-gear-product">
-						<a class="mo-gear-product__media" href="#mo-gear-preview">
-							<span class="mo-preview-product-img"></span>
-						</a>
-
-						<div class="mo-gear-product__content">
-							<span class="mo-gear-card-kicker">MO Gear</span>
-							<h2 class="mo-gear-product__title">
-								<a href="#mo-gear-preview">Leather Roll</a>
-							</h2>
-							<div class="mo-gear-product__excerpt">
-								<p>Protective carry for people who take blades seriously.</p>
-							</div>
-							<div class="mo-gear-product__footer">
-								<div class="mo-gear-product__price">$95</div>
-								<a class="button mo-gear-product__button" href="#mo-gear-preview">Add to Cart</a>
-							</div>
-						</div>
-					</li>
-
-					<li class="product mo-gear-product">
-						<a class="mo-gear-product__media" href="#mo-gear-preview">
-							<span class="mo-preview-product-img"></span>
-						</a>
-
-						<div class="mo-gear-product__content">
-							<span class="mo-gear-card-kicker">MO Gear</span>
-							<h2 class="mo-gear-product__title">
-								<a href="#mo-gear-preview">Sharpening Kit</a>
-							</h2>
-							<div class="mo-gear-product__excerpt">
-								<p>Maintenance essentials with a dark premium presentation.</p>
-							</div>
-							<div class="mo-gear-product__footer">
-								<div class="mo-gear-product__price">$80</div>
-								<a class="button mo-gear-product__button" href="#mo-gear-preview">Add to Cart</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</section>
 	</main>
 
 	<footer class="mo-footer">
@@ -572,24 +301,24 @@
 			</a>
 
 			<div class="mo-footer__socials" aria-label="MO Store social links">
-				<a class="mo-footer__social" href="#top" aria-label="Instagram">IG</a>
-				<a class="mo-footer__social" href="#top" aria-label="Facebook">FB</a>
-				<a class="mo-footer__social" href="#top" aria-label="TikTok">TT</a>
-				<a class="mo-footer__social" href="#top" aria-label="Snapchat">SC</a>
-				<a class="mo-footer__social" href="#top" aria-label="YouTube">YT</a>
+				<a class="mo-footer__social" href="#top" aria-label="Instagram"><img src="assets/img/social-instagram.png" alt="" width="78" height="78" loading="lazy" decoding="async"></a>
+				<a class="mo-footer__social" href="#top" aria-label="Facebook"><img src="assets/img/social-facebook.png" alt="" width="78" height="78" loading="lazy" decoding="async"></a>
+				<a class="mo-footer__social" href="#top" aria-label="TikTok"><img src="assets/img/social-tiktok.png" alt="" width="78" height="78" loading="lazy" decoding="async"></a>
+				<a class="mo-footer__social" href="#top" aria-label="Snapchat"><img src="assets/img/social-snapchat.png" alt="" width="78" height="78" loading="lazy" decoding="async"></a>
+				<a class="mo-footer__social" href="#top" aria-label="YouTube"><img src="assets/img/social-youtube.png" alt="" width="78" height="78" loading="lazy" decoding="async"></a>
 			</div>
 		</div>
 	</footer>
 
 	<div class="mo-static-preview-note">
-		Static preview only — open this file directly before WordPress. Forms and cart are visual mocks here.
+		Static preview only - forms, cart, and WooCommerce data are mocked here.
 	</div>
 
 	<script>
 		window.moStoreSettings = {
 			ajaxUrl: '#',
 			preferenceSuccess: {
-				title: 'Thanks — your preference has been noted.',
+				title: 'Thanks - your preference has been noted.',
 				message: 'It will help shape future MO Store batches.'
 			}
 		};

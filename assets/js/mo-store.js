@@ -284,40 +284,122 @@
 		}
 
 		const track = qs('[data-mo-slider-track]', slider);
-		const progress = qs('[data-mo-slider-progress]', slider);
-		const prev = qs('[data-mo-slider-prev]', slider);
-		const next = qs('[data-mo-slider-next]', slider);
 
 		if (!track) {
 			return;
 		}
 
+		const cards = qsa('[data-mo-slider-card]', track);
+
+		if (!cards.length) {
+			return;
+		}
+
 		createDragScroll(track);
 
-		const scrollAmount = () => {
-			const card = qs('[data-mo-slider-card]', track);
-			return card ? card.getBoundingClientRect().width + 16 : track.clientWidth * 0.8;
+		if (cards.length < 2) {
+			return;
+		}
+
+		const prepareClone = (card) => {
+			const clone = card.cloneNode(true);
+
+			clone.dataset.moSliderClone = 'true';
+			clone.classList.add('is-loaded');
+			clone.setAttribute('aria-hidden', 'true');
+			clone.removeAttribute('id');
+
+			qsa('[id]', clone).forEach((element) => element.removeAttribute('id'));
+			qsa('a, button, input, select, textarea, [tabindex]', clone).forEach((element) => {
+				element.setAttribute('tabindex', '-1');
+			});
+
+			return clone;
 		};
 
-		on(prev, 'click', () => {
-			track.scrollBy({
-				left: -scrollAmount(),
-				behavior: prefersReducedMotion ? 'auto' : 'smooth'
-			});
+		const before = doc.createDocumentFragment();
+		const after = doc.createDocumentFragment();
+
+		cards.forEach((card) => {
+			before.appendChild(prepareClone(card));
+			after.appendChild(prepareClone(card));
 		});
 
-		on(next, 'click', () => {
-			track.scrollBy({
-				left: scrollAmount(),
-				behavior: prefersReducedMotion ? 'auto' : 'smooth'
-			});
-		});
+		track.insertBefore(before, cards[0]);
+		track.appendChild(after);
 
-		const refresh = () => updateProgress(track, progress);
+		let allCards = qsa('[data-mo-slider-card]', track);
+		let setStart = cards.length;
+		let setWidth = 0;
+		let isAdjusting = false;
+
+		const cardCenterScroll = (card) => card.offsetLeft - ((track.clientWidth - card.offsetWidth) / 2);
+
+		const measure = () => {
+			allCards = qsa('[data-mo-slider-card]', track);
+
+			const first = allCards[setStart];
+			const nextSetFirst = allCards[setStart + cards.length];
+
+			if (!first || !nextSetFirst) {
+				setWidth = 0;
+				return;
+			}
+
+			setWidth = cardCenterScroll(nextSetFirst) - cardCenterScroll(first);
+		};
+
+		const centerCard = (index, behavior = 'auto') => {
+			const card = allCards[setStart + index];
+
+			if (!card) {
+				return;
+			}
+
+			track.scrollTo({
+				left: cardCenterScroll(card),
+				behavior
+			});
+		};
+
+		const rebalance = () => {
+			if (!setWidth || isAdjusting || track.classList.contains('is-dragging')) {
+				return;
+			}
+
+			const first = allCards[setStart];
+			const firstCenter = first ? cardCenterScroll(first) : 0;
+			const leftLimit = firstCenter - (setWidth * 0.5);
+			const rightLimit = firstCenter + (setWidth * 1.5);
+
+			if (track.scrollLeft < leftLimit) {
+				isAdjusting = true;
+				track.scrollLeft += setWidth;
+				isAdjusting = false;
+			} else if (track.scrollLeft > rightLimit) {
+				isAdjusting = true;
+				track.scrollLeft -= setWidth;
+				isAdjusting = false;
+			}
+		};
+
+		const refresh = () => {
+			measure();
+			rebalance();
+		};
 
 		on(track, 'scroll', refresh, { passive: true });
-		on(win, 'resize', refresh);
-		refresh();
+		on(track, 'pointerup', () => win.requestAnimationFrame(rebalance));
+		on(track, 'pointercancel', () => win.requestAnimationFrame(rebalance));
+		on(win, 'resize', () => {
+			measure();
+			centerCard(Math.min(1, cards.length - 1));
+		});
+
+		win.requestAnimationFrame(() => {
+			measure();
+			centerCard(Math.min(1, cards.length - 1));
+		});
 	};
 
 	const initLineMediaSliders = () => {

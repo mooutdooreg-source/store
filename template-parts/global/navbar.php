@@ -10,6 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $home_url = home_url( '/' );
+$why_mo_url = home_url( '/why-mo/' );
+$custom_orders_url = apply_filters( 'mo_store_custom_orders_url', 'https://moknives.art/' );
 ?>
 
 <header class="mo-navbar" data-mo-navbar>
@@ -29,14 +31,11 @@ $home_url = home_url( '/' );
 			<a class="mo-navbar__link" href="<?php echo esc_url( $home_url . '#explore-lines' ); ?>">
 				<?php esc_html_e( 'Lines', 'moknives-store-child' ); ?>
 			</a>
-			<a class="mo-navbar__link" href="<?php echo esc_url( $home_url . '#shape-next-batch' ); ?>">
-				<?php esc_html_e( 'About Store', 'moknives-store-child' ); ?>
+			<a class="mo-navbar__link" href="<?php echo esc_url( $why_mo_url ); ?>">
+				<?php esc_html_e( 'Why MO', 'moknives-store-child' ); ?>
 			</a>
-			<a class="mo-navbar__link" href="<?php echo esc_url( $home_url . '#mo-store-standard' ); ?>">
-				<?php esc_html_e( 'Craft', 'moknives-store-child' ); ?>
-			</a>
-			<a class="mo-navbar__link" href="<?php echo esc_url( home_url( '/mo-gear/' ) ); ?>">
-				<?php esc_html_e( 'MO Gear', 'moknives-store-child' ); ?>
+			<a class="mo-navbar__link" href="<?php echo esc_url( $custom_orders_url ); ?>" target="_blank" rel="noopener">
+				<?php esc_html_e( 'Custom Orders', 'moknives-store-child' ); ?>
 			</a>
 		</nav>
 
@@ -59,17 +58,13 @@ $home_url = home_url( '/' );
 				<span>01</span>
 				<?php esc_html_e( 'Lines', 'moknives-store-child' ); ?>
 			</a>
-			<a class="mo-mobile-menu__link" href="<?php echo esc_url( $home_url . '#shape-next-batch' ); ?>">
+			<a class="mo-mobile-menu__link" href="<?php echo esc_url( $why_mo_url ); ?>">
 				<span>02</span>
-				<?php esc_html_e( 'About Store', 'moknives-store-child' ); ?>
+				<?php esc_html_e( 'Why MO', 'moknives-store-child' ); ?>
 			</a>
-			<a class="mo-mobile-menu__link" href="<?php echo esc_url( $home_url . '#mo-store-standard' ); ?>">
+			<a class="mo-mobile-menu__link" href="<?php echo esc_url( $custom_orders_url ); ?>" target="_blank" rel="noopener">
 				<span>03</span>
-				<?php esc_html_e( 'Craft', 'moknives-store-child' ); ?>
-			</a>
-			<a class="mo-mobile-menu__link" href="<?php echo esc_url( home_url( '/mo-gear/' ) ); ?>">
-				<span>04</span>
-				<?php esc_html_e( 'MO Gear', 'moknives-store-child' ); ?>
+				<?php esc_html_e( 'Custom Orders', 'moknives-store-child' ); ?>
 			</a>
 		</div>
 	</div>

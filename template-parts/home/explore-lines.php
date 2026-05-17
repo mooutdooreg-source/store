@@ -21,14 +21,43 @@ $lines = mo_store_get_home_lines();
 	<div class="mo-lines__slider" data-mo-lines-slider>
 		<div class="mo-lines__track" data-mo-slider-track>
 			<?php foreach ( $lines as $line ) : ?>
-				<article class="mo-line-card skeleton" data-mo-slider-card>
-					<img
-						class="mo-line-card__image"
-						src="<?php echo esc_url( $line['image'] ); ?>"
-						alt="<?php echo esc_attr( $line['name'] ); ?>"
-						loading="lazy"
-						decoding="async"
-					/>
+				<?php
+				$card_id = empty( $line['slug'] ) ? '' : 'mo-' . sanitize_html_class( $line['slug'] ) . '-card';
+				$cta     = empty( $line['cta'] ) ? __( 'Explore Line', 'moknives-store-child' ) : $line['cta'];
+				$mobile  = empty( $line['mobile'] ) ? '' : $line['mobile'];
+				$visual  = empty( $line['visual_class'] ) ? '' : sanitize_html_class( $line['visual_class'] );
+				?>
+				<a
+					class="mo-line-card skeleton"
+					data-mo-slider-card
+					href="<?php echo esc_url( $line['url'] ); ?>"
+					<?php if ( $card_id ) : ?>
+						id="<?php echo esc_attr( $card_id ); ?>"
+					<?php endif; ?>
+				>
+					<?php if ( ! empty( $line['image'] ) ) : ?>
+						<?php if ( $mobile ) : ?>
+							<picture class="mo-line-card__image">
+								<source media="(max-width: 767px)" srcset="<?php echo esc_url( $mobile ); ?>">
+								<img
+									src="<?php echo esc_url( $line['image'] ); ?>"
+									alt="<?php echo esc_attr( $line['name'] ); ?>"
+									loading="lazy"
+									decoding="async"
+								/>
+							</picture>
+						<?php else : ?>
+							<img
+								class="mo-line-card__image"
+								src="<?php echo esc_url( $line['image'] ); ?>"
+								alt="<?php echo esc_attr( $line['name'] ); ?>"
+								loading="lazy"
+								decoding="async"
+							/>
+						<?php endif; ?>
+					<?php else : ?>
+						<span class="mo-line-card__image <?php echo esc_attr( $visual ); ?>" role="img" aria-label="<?php echo esc_attr( $line['name'] ); ?>"></span>
+					<?php endif; ?>
 
 					<div class="mo-line-card__overlay" aria-hidden="true"></div>
 
@@ -45,25 +74,12 @@ $lines = mo_store_get_home_lines();
 							<?php echo esc_html( $line['status'] ); ?>
 						</p>
 
-						<a class="mo-line-card__link" href="<?php echo esc_url( $line['url'] ); ?>">
-							<?php esc_html_e( 'Explore Line', 'moknives-store-child' ); ?>
-						</a>
+						<span class="mo-line-card__link">
+							<?php echo esc_html( $cta ); ?>
+						</span>
 					</div>
-				</article>
+				</a>
 			<?php endforeach; ?>
-		</div>
-
-		<div class="mo-lines__desktop-controls" aria-hidden="true">
-			<button class="mo-lines__arrow" type="button" data-mo-slider-prev tabindex="-1">
-				<?php mo_store_icon( 'arrow-left' ); ?>
-			</button>
-			<button class="mo-lines__arrow" type="button" data-mo-slider-next tabindex="-1">
-				<?php mo_store_icon( 'arrow-right' ); ?>
-			</button>
-		</div>
-
-		<div class="mo-slider-progress" aria-hidden="true">
-			<span data-mo-slider-progress></span>
 		</div>
 	</div>
 </section>

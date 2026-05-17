@@ -18,9 +18,20 @@ Use this checklist before replacing placeholder media. Keep the exact filenames 
 These files are already real media and do not need replacement unless the art direction changes:
 
 - `assets/img/logo-mo.svg`
+- `assets/img/abs-member-badge.svg`
+- `assets/img/hero-home-culinary.webp`
 - `assets/img/lines-takumo.webp`
-- `assets/img/lines-matador.webp`
+- `assets/img/lines-matador.jpg`
 - `assets/img/matador-in-use.webp`
+- `assets/img/social-facebook.png`
+- `assets/img/social-instagram.png`
+- `assets/img/social-snapchat.png`
+- `assets/img/social-tiktok.png`
+- `assets/img/social-youtube.png`
+- `assets/img/standard-grinding.jpg`
+- `assets/img/standard-heat-treatment.webp`
+- `assets/img/standard-limited-batch.webp`
+- `assets/img/standard-sharpening.jpg`
 
 ## Homepage Hero
 
@@ -90,7 +101,15 @@ These files are already real media and do not need replacement unless the art di
 
 | File | Use | Recommended source |
 | --- | --- | --- |
-| `assets/img/mo-gear-hero.webp` | MO Gear page hero | Premium gear collection / workshop spread |
+| `assets/img/mo-gear-card.webp` | MO Gear homepage card desktop | Premium gear collection / workshop spread |
+| `assets/img/mo-gear-card-mobile.webp` | MO Gear homepage card mobile | Vertical premium gear collection crop |
+
+## Why MO
+
+| File | Use | Recommended source |
+| --- | --- | --- |
+| `assets/img/abs-member-badge.svg` | ABS trust proof badge | American Bladesmith Society member badge |
+| `assets/video/performance-proof.mp4` | Why MO performance proof video | Process / proof clip from Why MO page |
 
 ## Replacement Check
 

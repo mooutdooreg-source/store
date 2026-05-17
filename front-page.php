@@ -18,6 +18,7 @@ mo_store_get_template_part( 'global/navbar' );
 	<?php
 	mo_store_get_template_part( 'home/hero-slideshow' );
 	mo_store_get_template_part( 'home/standard-bar' );
+	mo_store_get_template_part( 'home/why-mo' );
 	mo_store_get_template_part( 'home/explore-lines' );
 	mo_store_get_template_part( 'home/shape-next-batch' );
 	?>
