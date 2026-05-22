@@ -1,6 +1,6 @@
 <?php
 /**
- * Why MO proof page content.
+ * Why MO story page content.
  *
  * @package MoknivesStoreChild
  */
@@ -9,63 +9,65 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$why_items = array(
+$story_sections = array(
 	array(
-		'kicker' => 'Field Foundation',
-		'title'  => 'Before the forge, there was the field',
-		'copy'   => 'Working under the name Mo since 2015, I built my foundation in the field first - where a knife had to be more than sharp; it had to be dependable.',
+		'title'      => 'My Journey Begins',
+		'paragraphs' => array(
+			'So I started sharpening. And then sharpening some more.',
+			'From repeated use, I began understanding edges, angles, and the way a blade moves through material. Geometry came next — I adjusted grinds and profiles to match real tasks. Handles were redesigned for comfort, grip, and control.',
+			'Every change came from experience, not theory.',
+		),
 	),
 	array(
-		'kicker' => 'Field Standard',
-		'title'  => 'Where the worlds meet',
-		'copy'   => 'That same standard later found its way into the culinary world through co-founding ECC as Master Bladesmith and designer, creating for renowned chefs and some of the most exacting fine-dining, steakhouse, and Japanese culinary environments. Mo Knives exists where those worlds meet: raw durability, disciplined craftsmanship, and purpose without pretense.',
+		'title'      => 'Learning the Science',
+		'paragraphs' => array(
+			'Before I could make my first proper knife, I realized I needed to understand why blades work.',
+			'I dove into metallurgy — learning how steel behaves under heat and stress. I studied heat treatment, edge retention, and toughness. Every first knife was informed by this deep study, every decision deliberate.',
+		),
 	),
 	array(
-		'kicker' => 'Craft Logic',
-		'title'  => 'The logic of the blade',
-		'copy'   => 'Thermal refinement is tuned for resilience, retention, and the task the blade is expected to survive. Numbers without context are theater. The meaningful question is whether hardness, toughness, and stability serve the knife\'s intended work.',
+		'title'      => 'From Small Requests to Full-Time Bladesmith',
+		'paragraphs' => array(
+			'As I honed my craft, friends and enthusiasts began asking for knives. I made each one with care, building trust blade by blade.',
+			'Over time, what started as a hobby turned into a full-time calling. Since 2015, I have been practicing as a full-time bladesmith — building knives around real requirements, not catalogue assumptions.',
+		),
 	),
 	array(
-		'kicker' => 'Geometry Decides',
-		'title'  => 'Every line has to justify itself',
-		'copy'   => 'From edge thickness to grind choice, every line has to justify itself in contact. A knife can be beautifully finished and still feel wrong in the cut. Geometry is what decides resistance, bite, food release, durability, and control.',
+		'title'      => 'ECC — From the Wild to the Kitchen',
+		'paragraphs' => array(
+			'The next chapter came through ECC, which I co-founded as Master Bladesmith and Designer.',
+			'Here, my work reached the chefs and kitchens of the finest steakhouses and Japanese culinary environments. The same standards I applied outdoors — reliability, geometry, comfort — now had to meet the demands of professional culinary work.',
+			'ECC was not the beginning. It was a proving ground — where my approach was tested at the highest level.',
+		),
 	),
-	array(
-		'kicker' => 'Performance Proof',
-		'title'  => 'No theater. Only performance.',
-		'copy'   => 'No cosmetic excess. No empty claims. Only honest construction that earns trust when the blade meets real resistance.',
-	),
-	array(
-		'kicker' => 'Bench. Stone. Cut.',
-		'title'  => 'Proof has to agree',
-		'copy'   => 'Steel, heat treatment, and geometry only matter when performance confirms them. The bench, the stone, and the cut all have to agree before a theory earns trust.',
-	),
-	array(
-		'kicker' => 'Process Proof',
-		'title'  => 'Built in stages, proven in contact',
-		'copy'   => 'Forging, grinding, heat treatment, sharpening, and testing are not decorative chapters. They are the controlled sequence that turns material into a dependable tool.',
-	),
-	array(
-		'kicker' => 'Controlled Sequence',
-		'title'  => 'Each stage supports the next',
-		'copy'   => 'Each stage has to support the next: the profile must serve the hand, the grind must serve the cut, the heat treatment must serve the steel, and the final edge must serve real use.',
-	),
-	array(
-		'kicker' => 'Details Earn Their Place',
-		'title'  => 'Construction. Control. Proof.',
-		'copy'   => 'The goal is not to make every blade feel dramatic. The goal is to make every detail earn its place through construction, control, and proof.',
-	),
+);
+
+$standard_points = array(
+	'Tested in the field, proven by use',
+	'Crafted with precise geometry and comfort in mind',
+	'Heat-treated for performance and resilience',
+	'Built for people who need knives they can actually trust',
 );
 ?>
 
 <section class="mo-why-page" aria-labelledby="mo-why-page-title">
 	<div class="mo-why-page__inner">
-		<header class="mo-why-page__header">
-			<p class="mo-why__kicker"><?php esc_html_e( 'Why MO / Proof', 'moknives-store-child' ); ?></p>
+		<header class="mo-why-page__header mo-why-story-hero">
+			<p class="mo-why__kicker"><?php esc_html_e( 'Why MO / Story', 'moknives-store-child' ); ?></p>
 			<h1 id="mo-why-page-title">
-				<span><?php esc_html_e( 'No Theater.', 'moknives-store-child' ); ?></span>
-				<span class="mo-why__title-accent"><?php esc_html_e( 'Only performance', 'moknives-store-child' ); ?></span>
+				<span><?php esc_html_e( 'Why MO', 'moknives-store-child' ); ?></span>
 			</h1>
+			<div class="mo-why-story-hero__copy">
+				<p class="mo-why-story-hero__lead">
+					<?php esc_html_e( 'It started with one simple truth: ordinary knives just couldn’t keep up with what I needed.', 'moknives-store-child' ); ?>
+				</p>
+				<p>
+					<?php esc_html_e( 'I was out in the wild — hunting, camping, by the sea, cooking over open fires — and the knives I had were frustrating. They dulled too quickly. Handles hurt my hands. Geometry didn’t make sense for the task.', 'moknives-store-child' ); ?>
+				</p>
+				<p>
+					<?php esc_html_e( 'I wanted knives I could actually rely on.', 'moknives-store-child' ); ?>
+				</p>
+			</div>
 		</header>
 
 		<div class="mo-why-video mo-why-page__video">
@@ -80,14 +82,39 @@ $why_items = array(
 			></video>
 		</div>
 
-		<div class="mo-why__proof mo-why-page__proof" aria-label="<?php esc_attr_e( 'Why MO proof points', 'moknives-store-child' ); ?>">
-			<?php foreach ( $why_items as $item ) : ?>
-				<article class="mo-why-card">
-					<span class="mo-why-card__number"><?php echo esc_html( $item['kicker'] ); ?></span>
-					<h3><?php echo esc_html( $item['title'] ); ?></h3>
-					<p><?php echo esc_html( $item['copy'] ); ?></p>
+		<div class="mo-why-story" aria-label="<?php esc_attr_e( 'Why MO story chapters', 'moknives-store-child' ); ?>">
+			<?php foreach ( $story_sections as $section ) : ?>
+				<article class="mo-why-story-card">
+					<h2><?php echo esc_html( $section['title'] ); ?></h2>
+					<?php foreach ( $section['paragraphs'] as $paragraph ) : ?>
+						<p><?php echo esc_html( $paragraph ); ?></p>
+					<?php endforeach; ?>
 				</article>
 			<?php endforeach; ?>
+
+			<article class="mo-why-story-card mo-why-story-card--standard">
+				<h2><?php esc_html_e( 'The MO Standard Today', 'moknives-store-child' ); ?></h2>
+				<p><?php esc_html_e( 'Now, every MO blade carries my story:', 'moknives-store-child' ); ?></p>
+				<ul>
+					<?php foreach ( $standard_points as $point ) : ?>
+						<li><?php echo esc_html( $point ); ?></li>
+					<?php endforeach; ?>
+				</ul>
+				<p><?php esc_html_e( 'This site is your gateway to owning a MO blade without a special request or waiting list. We release limited numbered batches of each model, available for immediate delivery, so every blade is ready to perform from the moment it reaches your hand.', 'moknives-store-child' ); ?></p>
+			</article>
 		</div>
+
+		<section class="mo-why-story-cta" aria-label="<?php esc_attr_e( 'Why MO next steps', 'moknives-store-child' ); ?>">
+			<h2><?php esc_html_e( 'Field Tested. Chef Proven. Built by Mo.', 'moknives-store-child' ); ?></h2>
+			<p><?php esc_html_e( 'Every blade tells the story of its making. No shortcuts. No empty claims. Only knives built to perform, from the wild to the table.', 'moknives-store-child' ); ?></p>
+			<div class="mo-why-story-cta__links">
+				<a class="mo-button mo-button--primary" href="<?php echo esc_url( home_url( '/#explore-lines' ) ); ?>">
+					<?php esc_html_e( 'Limited batches live here → Explore the Lines', 'moknives-store-child' ); ?>
+				</a>
+				<a class="mo-button mo-button--ghost" href="https://moknives.art/" target="_blank" rel="noopener">
+					<?php esc_html_e( 'One-of-one customs live at moknives.art', 'moknives-store-child' ); ?>
+				</a>
+			</div>
+		</section>
 	</div>
 </section>
