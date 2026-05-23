@@ -197,29 +197,22 @@ function mo_store_get_home_lines() {
 function mo_store_get_batch_preference_options() {
 	return array(
 		array(
-			'id'    => 'japanese-kitchen-blades',
-			'label' => 'Japanese kitchen blades',
-			'icon'  => 'blade-slim',
+			'id'          => 'japanese-kitchen-blades',
+			'label'       => 'Japanese Kitchen Blades',
+			'description' => 'Precision-focused blades for refined kitchen work.',
+			'icon'        => 'blade-slim',
 		),
 		array(
-			'id'    => 'butchery-heavy-cutting',
-			'label' => 'Butchery / heavy cutting',
-			'icon'  => 'cleaver',
+			'id'          => 'butchery-heavy-cutting',
+			'label'       => 'Butchery / Heavy Cutting',
+			'description' => 'Built for power, control, and demanding prep.',
+			'icon'        => 'cleaver',
 		),
 		array(
-			'id'    => 'bbq-tools-serving-pieces',
-			'label' => 'BBQ tools & serving pieces',
-			'icon'  => 'fork-fire',
-		),
-		array(
-			'id'    => 'outdoor-utility-blades',
-			'label' => 'Outdoor / utility blades',
-			'icon'  => 'utility',
-		),
-		array(
-			'id'    => 'something-new',
-			'label' => 'Something new',
-			'icon'  => 'spark',
+			'id'          => 'bbq-tools-serving-pieces',
+			'label'       => 'BBQ Tools & Serving Pieces',
+			'description' => 'Fire-side tools, carving pieces, and serving essentials.',
+			'icon'        => 'fork-fire',
 		),
 	);
 }

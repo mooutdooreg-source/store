@@ -17,7 +17,11 @@ $options = mo_store_get_batch_preference_options();
 		<div class="mo-section-heading mo-batch__heading">
 			<h2 id="mo-batch-title"><?php esc_html_e( 'Shape the Next Batch', 'moknives-store-child' ); ?></h2>
 
-			<p>
+			<p class="mo-batch__subtitle">
+				<?php esc_html_e( 'Tell us what direction you want to see in a future MO Store release.', 'moknives-store-child' ); ?>
+			</p>
+
+			<p class="mo-batch__model">
 				<?php esc_html_e( 'MO Store releases are built as focused limited batches — each line shaped around a defined use, cutting purpose, and MO standard.', 'moknives-store-child' ); ?>
 			</p>
 		</div>
@@ -62,6 +66,10 @@ $options = mo_store_get_batch_preference_options();
 							<?php echo esc_html( $option['label'] ); ?>
 						</span>
 
+						<span class="mo-batch-option__description">
+							<?php echo esc_html( $option['description'] ); ?>
+						</span>
+
 						<span class="mo-batch-option__check" aria-hidden="true">
 							<?php mo_store_icon( 'check' ); ?>
 						</span>
@@ -74,7 +82,7 @@ $options = mo_store_get_batch_preference_options();
 			</p>
 
 			<button class="mo-button mo-button--primary mo-batch__submit" type="submit" disabled data-mo-preference-submit>
-				<?php esc_html_e( 'Submit Preference', 'moknives-store-child' ); ?>
+				<?php esc_html_e( 'Submit Your Preference', 'moknives-store-child' ); ?>
 			</button>
 
 			<div class="mo-form-message" data-mo-preference-message aria-live="polite"></div>

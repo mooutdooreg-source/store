@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="mo-why__intro">
 			<p class="mo-why__kicker"><?php esc_html_e( 'Why MO / Origin', 'moknives-store-child' ); ?></p>
 			<h2 id="mo-why-title">
-				<span><?php esc_html_e( 'No Theater.', 'moknives-store-child' ); ?></span>
+				<span><?php esc_html_e( 'No Showmanship.', 'moknives-store-child' ); ?></span>
 				<span class="mo-why__title-accent"><?php esc_html_e( 'Only performance', 'moknives-store-child' ); ?></span>
 			</h2>
 			<p>

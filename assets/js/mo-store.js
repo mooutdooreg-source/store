@@ -129,12 +129,16 @@
 
 	const initHeroSlideshow = () => {
 		const slideshow = qs('[data-mo-hero-slideshow]');
+		const slideDuration = 9800;
 
 		if (!slideshow || prefersReducedMotion) {
 			return;
 		}
 
 		const slides = qsa('[data-mo-hero-slide]', slideshow);
+		const hero = slideshow.closest('.mo-hero');
+		const progressSegments = hero ? qsa('[data-mo-hero-progress-segment]', hero) : [];
+		const counterCurrent = hero ? qs('[data-mo-hero-current]', hero) : null;
 
 		if (slides.length < 2) {
 			return;
@@ -147,11 +151,34 @@
 			slides[0].classList.add('is-active');
 		}
 
-		win.setInterval(() => {
+		const updateCounter = () => {
+			if (counterCurrent) {
+				counterCurrent.textContent = String(activeIndex + 1).padStart(2, '0');
+			}
+		};
+
+		updateCounter();
+
+		const setActiveSlide = (index) => {
 			slides[activeIndex].classList.remove('is-active');
-			activeIndex = (activeIndex + 1) % slides.length;
+
+			if (progressSegments[activeIndex]) {
+				progressSegments[activeIndex].classList.remove('is-active');
+			}
+
+			activeIndex = index;
 			slides[activeIndex].classList.add('is-active');
-		}, 6500);
+
+			if (progressSegments[activeIndex]) {
+				progressSegments[activeIndex].classList.add('is-active');
+			}
+
+			updateCounter();
+		};
+
+		win.setInterval(() => {
+			setActiveSlide((activeIndex + 1) % slides.length);
+		}, slideDuration);
 	};
 
 	const removeSkeletonWhenLoaded = () => {

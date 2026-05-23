@@ -86,14 +86,30 @@
 			}
 
 			.mo-static-preview-note {
-				left: 14px;
-				max-width: none;
+				display: none;
 			}
 		}
 	</style>
 </head>
 
 <body class="mo-store-site mo-store-home">
+	<div class="mo-brand-marquee" aria-label="MO Knives crafting excellence since 2015 and limited July batches now in preparation">
+		<div class="mo-brand-marquee__track" aria-hidden="true">
+			<div class="mo-brand-marquee__group">
+				<div class="mo-brand-marquee__item"><img class="mo-brand-marquee__logo" src="assets/img/logo-mo.svg" alt="" width="96" height="40"><span>CRAFTING EXCELLENCE | SINCE 2015</span><span>LIMITED JULY BATCHES — NOW IN PREPARATION</span></div>
+				<div class="mo-brand-marquee__item"><img class="mo-brand-marquee__logo" src="assets/img/logo-mo.svg" alt="" width="96" height="40"><span>CRAFTING EXCELLENCE | SINCE 2015</span><span>LIMITED JULY BATCHES — NOW IN PREPARATION</span></div>
+				<div class="mo-brand-marquee__item"><img class="mo-brand-marquee__logo" src="assets/img/logo-mo.svg" alt="" width="96" height="40"><span>CRAFTING EXCELLENCE | SINCE 2015</span><span>LIMITED JULY BATCHES — NOW IN PREPARATION</span></div>
+				<div class="mo-brand-marquee__item"><img class="mo-brand-marquee__logo" src="assets/img/logo-mo.svg" alt="" width="96" height="40"><span>CRAFTING EXCELLENCE | SINCE 2015</span><span>LIMITED JULY BATCHES — NOW IN PREPARATION</span></div>
+			</div>
+			<div class="mo-brand-marquee__group">
+				<div class="mo-brand-marquee__item"><img class="mo-brand-marquee__logo" src="assets/img/logo-mo.svg" alt="" width="96" height="40"><span>CRAFTING EXCELLENCE | SINCE 2015</span><span>LIMITED JULY BATCHES — NOW IN PREPARATION</span></div>
+				<div class="mo-brand-marquee__item"><img class="mo-brand-marquee__logo" src="assets/img/logo-mo.svg" alt="" width="96" height="40"><span>CRAFTING EXCELLENCE | SINCE 2015</span><span>LIMITED JULY BATCHES — NOW IN PREPARATION</span></div>
+				<div class="mo-brand-marquee__item"><img class="mo-brand-marquee__logo" src="assets/img/logo-mo.svg" alt="" width="96" height="40"><span>CRAFTING EXCELLENCE | SINCE 2015</span><span>LIMITED JULY BATCHES — NOW IN PREPARATION</span></div>
+				<div class="mo-brand-marquee__item"><img class="mo-brand-marquee__logo" src="assets/img/logo-mo.svg" alt="" width="96" height="40"><span>CRAFTING EXCELLENCE | SINCE 2015</span><span>LIMITED JULY BATCHES — NOW IN PREPARATION</span></div>
+			</div>
+		</div>
+	</div>
+
 	<header class="mo-navbar" data-mo-navbar>
 		<div class="mo-navbar__inner">
 			<a class="mo-navbar__logo" href="#top" aria-label="MO Store homepage">
@@ -130,24 +146,54 @@
 
 	<main id="top" class="mo-store-main mo-store-main--home">
 		<section class="mo-hero" aria-label="MO Store cinematic introduction">
-			<div class="mo-hero__slideshow" data-mo-hero-slideshow>
-				<picture class="mo-hero__slide is-active" data-mo-hero-slide>
-					<img src="assets/img/hero-home-culinary.webp" alt="MO culinary blade with wagyu, garlic, and herbs" loading="eager" decoding="async">
-				</picture>
-			</div>
+			<div class="mo-hero__card">
+				<div class="mo-hero__slideshow" data-mo-hero-slideshow>
+					<picture class="mo-hero__slide mo-hero__slide--forging is-active" data-mo-hero-slide>
+						<source media="(max-width: 767px)" srcset="assets/img/hero-forged-by-mo.mobile.webp">
+						<img src="assets/img/hero-forged-by-mo.desktop.webp" alt="Mo forging a patterned billet on the anvil" loading="eager" decoding="async">
+					</picture>
+					<picture class="mo-hero__slide mo-hero__slide--sharpening" data-mo-hero-slide>
+						<img src="assets/img/hero-hand-sharpened.webp" alt="Hand sharpening a MO blade on a whetstone" loading="lazy" decoding="async">
+					</picture>
+					<picture class="mo-hero__slide mo-hero__slide--sparks" data-mo-hero-slide>
+						<source media="(max-width: 767px)" srcset="assets/img/hero-grinding-sparks.webp">
+						<img src="assets/img/hero-grinding-sparks.desktop.webp" alt="Blade grinding sparks in the MO workshop" loading="lazy" decoding="async">
+					</picture>
+					<picture class="mo-hero__slide mo-hero__slide--handle" data-mo-hero-slide>
+						<source media="(max-width: 767px)" srcset="assets/img/hero-handle-detail.webp">
+						<img src="assets/img/hero-handle-detail.desktop.webp" alt="Hands checking the handle detail of a finished MO knife" loading="lazy" decoding="async">
+					</picture>
+					<picture class="mo-hero__slide mo-hero__slide--grounding" data-mo-hero-slide>
+						<source media="(max-width: 767px)" srcset="assets/img/hero-hand-grounded.mobile.webp">
+						<img src="assets/img/hero-hand-grounded.webp" alt="Mo grinding a blade beside the forge" loading="lazy" decoding="async">
+					</picture>
+				</div>
 
-			<div class="mo-hero__overlay" aria-hidden="true"></div>
-			<div class="mo-hero__announcement" role="status">New batches begin production in July</div>
+				<div class="mo-hero__overlay" aria-hidden="true"></div>
+				<div class="mo-hero__progress" aria-hidden="true">
+					<span class="mo-hero__progress-segment is-active" data-mo-hero-progress-segment></span>
+					<span class="mo-hero__progress-segment" data-mo-hero-progress-segment></span>
+					<span class="mo-hero__progress-segment" data-mo-hero-progress-segment></span>
+					<span class="mo-hero__progress-segment" data-mo-hero-progress-segment></span>
+					<span class="mo-hero__progress-segment" data-mo-hero-progress-segment></span>
+				</div>
+				<div class="mo-hero__counter" aria-hidden="true">
+					<span data-mo-hero-current>01</span>
+					<span>/</span>
+					<span>05</span>
+				</div>
 
-			<div class="mo-hero__content">
-				<p class="mo-hero__kicker">MO Store</p>
-				<h1 class="mo-hero__title">
-					<span>Premium Hard-Use</span>
-					<span class="mo-hero__title-accent">Blades</span>
-				</h1>
-				<p class="mo-hero__subheadline">Available exclusively in limited numbered releases. Hand-finished and expertly heat-treated for ultimate performance.</p>
-				<p class="mo-hero__lead">Premium production blades designed, hand-ground, and precision heat-treated by Mo the Bladesmith.</p>
-				<a class="mo-button mo-button--primary mo-hero__button" href="#explore-lines">Explore the Lines</a>
+				<div class="mo-hero__content">
+					<p class="mo-hero__kicker">MO Store</p>
+					<h1 class="mo-hero__title">
+						<span>Premium</span>
+						<span>Hard-Use</span>
+						<span class="mo-hero__title-accent">Blades</span>
+					</h1>
+					<p class="mo-hero__subheadline">Released only in limited numbered batches.</p>
+					<p class="mo-hero__lead">Each blade is designed, hand-ground, hand-finished, and heat-treated by Mo the Bladesmith.</p>
+					<a class="mo-button mo-button--primary mo-hero__button" href="#explore-lines">Explore the Lines</a>
+				</div>
 			</div>
 		</section>
 
@@ -169,7 +215,7 @@
 				<div class="mo-why__intro">
 					<p class="mo-why__kicker">Why MO / Origin</p>
 					<h2 id="mo-why-title">
-						<span>No Theater.</span>
+						<span>No Showmanship.</span>
 						<span class="mo-why__title-accent">Only performance</span>
 					</h2>
 					<p>My work did not begin at the anvil. It began in the field - as a hunter, angler, and open-fire cook - shaped by the demanding reality of use.</p>
@@ -254,7 +300,8 @@
 			<div class="mo-batch__inner">
 				<div class="mo-section-heading mo-batch__heading">
 					<h2 id="mo-batch-title">Shape the Next Batch</h2>
-					<p>MO Store releases are built as focused limited batches - each line shaped around a defined use, cutting purpose, and MO standard.</p>
+					<p class="mo-batch__subtitle">Tell us what direction you want to see in a future MO Store release.</p>
+					<p class="mo-batch__model">MO Store releases are built as focused limited batches — each line shaped around a defined use, cutting purpose, and MO standard.</p>
 				</div>
 
 				<form class="mo-batch__form" data-mo-preference-form>
@@ -267,26 +314,35 @@
 
 					<div class="mo-batch__options" role="listbox" aria-label="Choose a direction">
 						<button class="mo-batch-option" type="button" role="option" aria-selected="false" data-mo-preference-option data-value="japanese-kitchen-blades">
-							<span class="mo-batch-option__icon">&mdash;</span>
-							<span class="mo-batch-option__label">Japanese kitchen blades</span>
-							<span class="mo-batch-option__check">&#10003;</span>
+							<span class="mo-batch-option__icon" aria-hidden="true">
+								<svg viewBox="0 0 64 64" focusable="false"><path d="M9 50c13-16 25-28 46-40-8 15-19 30-39 47L9 50Z"/><path d="M17 56l-8-8"/><path d="M14 47l6 6"/></svg>
+							</span>
+							<span class="mo-batch-option__label">Japanese Kitchen Blades</span>
+							<span class="mo-batch-option__description">Precision-focused blades for refined kitchen work.</span>
+							<span class="mo-batch-option__check" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M16 34l10 10 22-24"/></svg></span>
 						</button>
 
 						<button class="mo-batch-option" type="button" role="option" aria-selected="false" data-mo-preference-option data-value="butchery-heavy-cutting">
-							<span class="mo-batch-option__icon">&#9650;</span>
-							<span class="mo-batch-option__label">Butchery / heavy cutting</span>
-							<span class="mo-batch-option__check">&#10003;</span>
+							<span class="mo-batch-option__icon" aria-hidden="true">
+								<svg viewBox="0 0 64 64" focusable="false"><path d="M14 14h38v28c0 8-6 14-14 14H14V14Z"/><path d="M22 22h8"/><path d="M14 48H7"/></svg>
+							</span>
+							<span class="mo-batch-option__label">Butchery / Heavy Cutting</span>
+							<span class="mo-batch-option__description">Built for power, control, and demanding prep.</span>
+							<span class="mo-batch-option__check" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M16 34l10 10 22-24"/></svg></span>
 						</button>
 
 						<button class="mo-batch-option" type="button" role="option" aria-selected="false" data-mo-preference-option data-value="bbq-tools-serving-pieces">
-							<span class="mo-batch-option__icon">&#9832;</span>
-							<span class="mo-batch-option__label">BBQ tools &amp; serving pieces</span>
-							<span class="mo-batch-option__check">&#10003;</span>
+							<span class="mo-batch-option__icon" aria-hidden="true">
+								<svg viewBox="0 0 64 64" focusable="false"><path d="M17 8v24"/><path d="M25 8v24"/><path d="M13 8v16c0 7 4 10 8 10s8-3 8-10V8"/><path d="M21 34v22"/><path d="M44 55c7-4 9-10 7-16-2-7-8-10-7-19-8 7-14 15-12 25 1 6 5 9 12 10Z"/><path d="M43 55c3-4 3-8 1-13"/></svg>
+							</span>
+							<span class="mo-batch-option__label">BBQ Tools &amp; Serving Pieces</span>
+							<span class="mo-batch-option__description">Fire-side tools, carving pieces, and serving essentials.</span>
+							<span class="mo-batch-option__check" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><path d="M16 34l10 10 22-24"/></svg></span>
 						</button>
 					</div>
 
 					<p class="mo-batch__note">This helps guide future MO Store batches.</p>
-					<button class="mo-button mo-button--primary mo-batch__submit" type="submit" disabled data-mo-preference-submit>Submit Preference</button>
+					<button class="mo-button mo-button--primary mo-batch__submit" type="submit" disabled data-mo-preference-submit>Submit Your Preference</button>
 					<div class="mo-form-message" data-mo-preference-message aria-live="polite"></div>
 				</form>
 			</div>
