@@ -163,7 +163,7 @@ function mo_store_get_home_lines() {
 			'eyebrow'     => 'Signature Line',
 			'description' => 'Butchery-focused blades built for heavy cutting work.',
 			'status'      => 'Prepared for Limited Release',
-			'image'       => mo_store_image_url( 'lines-matador.webp' ),
+			'image'       => mo_store_image_url( 'lines-matador.jpg' ),
 			'url'         => home_url( '/lines/matador/' ),
 		),
 		array(
@@ -174,6 +174,17 @@ function mo_store_get_home_lines() {
 			'status'      => 'Prepared for Limited Release',
 			'image'       => mo_store_image_url( 'lines-pitmaster.webp' ),
 			'url'         => home_url( '/lines/pitmaster/' ),
+		),
+		array(
+			'slug'        => 'gear',
+			'name'        => 'MO GEAR',
+			'eyebrow'     => 'Gear Collection',
+			'description' => 'Hard-to-find gear for people who take blades seriously.',
+			'status'      => 'Integrated with Store Lines',
+			'image'       => mo_store_image_url( 'mo-gear-card.webp' ),
+			'mobile'      => mo_store_image_url( 'mo-gear-card-mobile.webp' ),
+			'url'          => home_url( '/mo-gear/' ),
+			'cta'          => 'Explore Gear',
 		),
 	);
 }
@@ -186,29 +197,22 @@ function mo_store_get_home_lines() {
 function mo_store_get_batch_preference_options() {
 	return array(
 		array(
-			'id'    => 'japanese-kitchen-blades',
-			'label' => 'Japanese kitchen blades',
-			'icon'  => 'blade-slim',
+			'id'          => 'japanese-kitchen-blades',
+			'label'       => 'Japanese Kitchen Blades',
+			'description' => 'Precision-focused blades for refined kitchen work.',
+			'icon'        => 'blade-slim',
 		),
 		array(
-			'id'    => 'butchery-heavy-cutting',
-			'label' => 'Butchery / heavy cutting',
-			'icon'  => 'cleaver',
+			'id'          => 'butchery-heavy-cutting',
+			'label'       => 'Butchery / Heavy Cutting',
+			'description' => 'Built for power, control, and demanding prep.',
+			'icon'        => 'cleaver',
 		),
 		array(
-			'id'    => 'bbq-tools-serving-pieces',
-			'label' => 'BBQ tools & serving pieces',
-			'icon'  => 'fork-fire',
-		),
-		array(
-			'id'    => 'outdoor-utility-blades',
-			'label' => 'Outdoor / utility blades',
-			'icon'  => 'utility',
-		),
-		array(
-			'id'    => 'something-new',
-			'label' => 'Something new',
-			'icon'  => 'spark',
+			'id'          => 'bbq-tools-serving-pieces',
+			'label'       => 'BBQ Tools & Serving Pieces',
+			'description' => 'Fire-side tools, carving pieces, and serving essentials.',
+			'icon'        => 'fork-fire',
 		),
 	);
 }

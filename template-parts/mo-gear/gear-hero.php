@@ -12,8 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <section class="mo-gear-hero" aria-labelledby="mo-gear-hero-title">
 	<picture class="mo-gear-hero__media">
+		<source media="(max-width: 767px)" srcset="<?php echo esc_url( mo_store_image_url( 'mo-gear-card-mobile.webp' ) ); ?>">
 		<img
-			src="<?php echo esc_url( mo_store_image_url( 'mo-gear-hero.webp' ) ); ?>"
+			src="<?php echo esc_url( mo_store_image_url( 'mo-gear-card.webp' ) ); ?>"
 			alt="<?php esc_attr_e( 'MO Gear', 'moknives-store-child' ); ?>"
 			loading="eager"
 			decoding="async"

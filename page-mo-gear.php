@@ -22,7 +22,13 @@ mo_store_get_template_part( 'global/navbar' );
 
 	<section class="mo-gear-shop" aria-label="<?php esc_attr_e( 'MO Gear product grid', 'moknives-store-child' ); ?>">
 		<div class="mo-gear-shop__inner">
-			<?php echo do_shortcode( '[products limit="12" columns="3" paginate="true"]' ); ?>
+			<?php if ( shortcode_exists( 'products' ) ) : ?>
+				<?php echo do_shortcode( '[products limit="12" columns="3" paginate="true"]' ); ?>
+			<?php else : ?>
+				<div class="mo-gear-empty">
+					<p><?php esc_html_e( 'MO Gear products will appear here when WooCommerce is ready.', 'moknives-store-child' ); ?></p>
+				</div>
+			<?php endif; ?>
 		</div>
 	</section>
 </main>

@@ -54,6 +54,26 @@ function mo_store_shortcode_standard_bar() {
 add_shortcode( 'mo_store_standard_bar', 'mo_store_shortcode_standard_bar' );
 
 /**
+ * Why MO homepage section shortcode.
+ *
+ * @return string
+ */
+function mo_store_shortcode_why_mo() {
+	return mo_store_render_shortcode_template( 'home/why-mo' );
+}
+add_shortcode( 'mo_store_why_mo', 'mo_store_shortcode_why_mo' );
+
+/**
+ * Full Why MO proof page shortcode.
+ *
+ * @return string
+ */
+function mo_store_shortcode_why_mo_page() {
+	return mo_store_render_shortcode_template( 'why-mo/page' );
+}
+add_shortcode( 'mo_store_why_mo_page', 'mo_store_shortcode_why_mo_page' );
+
+/**
  * Explore the Lines shortcode.
  *
  * @return string
@@ -94,6 +114,7 @@ function mo_store_shortcode_homepage() {
 	mo_store_get_template_part( 'global/navbar' );
 	mo_store_get_template_part( 'home/hero-slideshow' );
 	mo_store_get_template_part( 'home/standard-bar' );
+	mo_store_get_template_part( 'home/why-mo' );
 	mo_store_get_template_part( 'home/explore-lines' );
 	mo_store_get_template_part( 'home/shape-next-batch' );
 	mo_store_get_template_part( 'global/footer' );

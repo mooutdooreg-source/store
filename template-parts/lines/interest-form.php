@@ -46,6 +46,19 @@ $interest_form_id = 'mo-interest-form-' . sanitize_html_class( $line['slug'] );
 			<input type="hidden" name="action" value="mo_store_submit_interest">
 			<input type="hidden" name="nonce" value="<?php echo esc_attr( wp_create_nonce( 'mo_store_interest_nonce' ) ); ?>">
 
+			<div class="mo-honeypot" aria-hidden="true">
+				<label for="<?php echo esc_attr( $interest_form_id ); ?>-website">
+					<?php esc_html_e( 'Website', 'moknives-store-child' ); ?>
+				</label>
+				<input
+					id="<?php echo esc_attr( $interest_form_id ); ?>-website"
+					type="text"
+					name="mo_store_website"
+					tabindex="-1"
+					autocomplete="off"
+				>
+			</div>
+
 			<div class="mo-field">
 				<label for="<?php echo esc_attr( $interest_form_id ); ?>-name">
 					<?php esc_html_e( 'Name', 'moknives-store-child' ); ?>
